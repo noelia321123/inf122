@@ -1,0 +1,40 @@
+body{
+    background-color: #ffc9c9
+}
+
+h1{
+    color: rgb(230, 64, 64);
+    font-size: 25px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: black;
+    color: rgba(255, 30, 0, 0.845);
+    text-align: center;
+}
+p{
+    font-size: large;
+    text-align: center;
+    font-weight: bold;
+}
+
+img{
+    max-width: 25%;
+    max-height: 25%;
+}
+li{
+    font-size: 30px;
+}
+ol li{
+    font-size:30px ;
+    color:rgb(15, 187, 50);
+}
+ul li{
+    color: green;
+    font-weight: bold;
+    background-color: yellow;
+    text-align: center;
+
+}
+enviar{
+    border-radius: 5px;
+    background-color:rgb(0, 0, 255);
+}
