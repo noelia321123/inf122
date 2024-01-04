@@ -1,6 +1,5 @@
 # Prueba
 Nombre: Norka Noelia Gutierrez Guzman
-
 Materia: Inf-122
+color favorito: #ff0000
 
-<span style="color: #512E5F">color favorito</span>
