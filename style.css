@@ -1,16 +1,22 @@
 body{
-    background-color: #ffc9c9
+    background-color: #a7a7a7;
 }
 
 h1{
-    color: rgb(230, 64, 64);
+    color:rgb(120, 19, 146);
     font-size: 25px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: black;
-    color: rgba(255, 30, 0, 0.845);
+   /* background-color: black;*/
+    color: rgb(120, 19, 146);
     text-align: center;
 }
+h2{
+    
+    color: rgb(120, 19, 146);
+
+}
 p{
+    color: #000000;
     font-size: large;
     text-align: center;
     font-weight: bold;
@@ -26,6 +32,7 @@ li{
 ol li{
     font-size:30px ;
     color:rgb(15, 187, 50);
+    
 }
 ul li{
     color: green;
@@ -34,7 +41,25 @@ ul li{
     text-align: center;
 
 }
-enviar{
+h2{
+    
+    color: rgb(120, 19, 146);
+
+}
+.nombre{
+    background-color: rgba(133, 71, 150, 0.726);
+}
+.apellido{
+    background-color: rgb(79, 12, 97);
+}
+.email{
+    background-color: rgb(79, 12, 97);
+}
+
+.registrar{
     border-radius: 5px;
-    background-color:rgb(0, 0, 255);
+    background-color: rgb(87, 229, 94);
+}
+.sesion{
+    background-color:rgb(87, 229, 94);
 }
