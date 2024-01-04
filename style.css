@@ -31,13 +31,13 @@ li{
 }
 ol li{
     font-size:30px ;
-    color:rgb(15, 187, 50);
+    color:rgb(85, 8, 109);
     
 }
 ul li{
     color: green;
     font-weight: bold;
-    background-color: yellow;
+    background-color: rgba(91, 63, 109, 0.483);
     text-align: center;
 
 }
@@ -47,7 +47,7 @@ h2{
 
 }
 .nombre{
-    background-color: rgba(133, 71, 150, 0.726);
+    background-color: rgb(79, 12, 97);
 }
 .apellido{
     background-color: rgb(79, 12, 97);
