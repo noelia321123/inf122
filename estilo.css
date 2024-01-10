@@ -27,6 +27,13 @@
     justify-items:center;
     background-color: var(--white);
 }
+
+span img{
+    align-items: center;
+    width: 25px;
+    height: 25PX;
+
+}
 .title{
     color:var(--black);
     text-align: center;
@@ -57,7 +64,7 @@
 
 .icons-container{
     display: grid;
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(3,1fr);
     margin: 50px 260px 50px 260px;
     justify-content: center;
 }
@@ -84,4 +91,13 @@
 .icon-text h2{
     font-size: var(--sm);
     margin: 0;
+}
+
+/* linea para que sea responsive*/
+@media(max-width:720px){
+    .icons-container{
+        grid-template-columns: repeat(1,1fr);
+        margin: 520px 10px 50px 10px;
+    }
+    
 }
