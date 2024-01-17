@@ -4,35 +4,65 @@ import CuadroB from './CuadroB';
 import { useState } from 'react';
 
 
-function TableroC() {
+function TableroD() {
+    function calcularGanador(cuadros) {
+        const lineas = [
+            [0, 1, 2], // primera fila
+            [3, 4, 5], // segunda fila
+            [6, 7, 8], // tercera fila
+            [0, 3, 6], // primera columna
+            [1, 4, 7], // segunda columna
+            [2, 5, 8], // tercera columna
+            [0, 4, 8], // diagonal
+            [2, 4, 6] // diagonal
+        ];
+        for (let i = 0; i < lineas.length; i++) {
+            const [a, b, c] = lineas[i];
+            if (cuadros[a] && cuadros[a] === cuadros[b] && cuadros[a] === cuadros[c]) {
+                return cuadros[a];
+            }
+        }
+        return null;
+    }
+    function renderizarCuadro(i) {
+        return (
+            <CuadroB
+                valor={cuadros[i]}
+                funcion={() => click(i)}
+            />
+        );
+    }
     const [cuadros, setCuadros] = useState(Array(9).fill(null));
-    const [jugador, setJugador] = useState("O");
+    const [jugador, setJugador] = useState("X");
     const click = (i) => {
         const cuadrosTemp = [...cuadros];
-        cuadrosTemp[i] = jugador;
-        setCuadros(cuadrosTemp);
-        if (jugador === "X") {
-            setJugador("O");
-        } else {
-            setJugador("X");
+        if (cuadrosTemp[i] === null) {
+            cuadrosTemp[i] = jugador;
+            setCuadros(cuadrosTemp);
+            setJugador(jugador === "X" ? "O" : "X");
+        }
+        if (calcularGanador(cuadrosTemp) !== null) {
+            alert("Ganador: " + calcularGanador(cuadrosTemp));
+            setCuadros(Array(9).fill(null));
         }
     }
+
 
     return (
         <div className='juego'>
             <h1>Siguiente Jugador: {jugador}</h1>
             <div className="tablero">
-                <CuadroB valor={cuadros[0]} funcion={() => click(0)} />
-                <CuadroB valor={cuadros[1]} funcion={() => click(1)} />
-                <CuadroB valor={cuadros[2]} funcion={() => click(2)} />
-                <CuadroB valor={cuadros[3]} funcion={() => click(3)} />
-                <CuadroB valor={cuadros[4]} funcion={() => click(4)} />
-                <CuadroB valor={cuadros[5]} funcion={() => click(5)} />
-                <CuadroB valor={cuadros[6]} funcion={() => click(6)} />
-                <CuadroB valor={cuadros[7]} funcion={() => click(7)} />
-                <CuadroB valor={cuadros[8]} funcion={() => click(8)} />
+                {renderizarCuadro(0)}
+                {renderizarCuadro(1)}
+                {renderizarCuadro(2)}
+                {renderizarCuadro(3)}
+                {renderizarCuadro(4)}
+                {renderizarCuadro(5)}
+                {renderizarCuadro(6)}
+                {renderizarCuadro(7)}
+                {renderizarCuadro(8)}
             </div>
         </div>
     );
 }
-export default TableroC;
+export default TableroD;
