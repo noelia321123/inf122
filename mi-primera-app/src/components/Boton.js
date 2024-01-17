@@ -1,3 +1,4 @@
+
 import '../style/Boton.css';
 
 function Boton({ texto, esBotonClick, funcionClick }) {

@@ -1,3 +1,4 @@
+
 import '../style/Boton.css';
 import React from 'react';
 function Boton({ texto, esBotonClick, funcionClick }) {
